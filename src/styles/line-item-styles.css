@@ -1,0 +1,35 @@
+.line-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unit-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell-container{
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.imageStyle{
+    width: 30%
+}
+
+.name-style {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}

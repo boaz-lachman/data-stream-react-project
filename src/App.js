@@ -23,13 +23,10 @@ class App extends Component {
         this.ws = new Sockette('ws://events-stream.herokuapp.com/', {
             timeout: 5e3,
             maxAttempts: 10,
-            onopen: e => {console.log('Connected!', e)
+            onopen: e => {console.log('Connected!', e);
                 this.ws.json({type: 'ping'});},
             onmessage: e => {
                 this.props.itemListUpdate(this.props.listData,JSON.parse(e.data))},
-            onreconnect: e => console.log('Reconnecting...', e),
-            onmaximum: e => console.log('Stop Attempting!', e),
-            onclose: e => console.log('Closed!', e),
             onerror: e => console.log('Error:', e)
         });
 

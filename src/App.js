@@ -58,9 +58,9 @@ class App extends Component {
               return this.props.filterText === '' ? true :
                   value.name.toLowerCase().indexOf(this.props.filterText) != -1;
           })}/>
-          <div style={{position: 'sticky', bottom: 0}}>
+          <footer style={{position: 'fixed', bottom: 0}}>
               {this.props.listData.length} Items
-          </div>
+          </footer>
       </div>
     );
   }

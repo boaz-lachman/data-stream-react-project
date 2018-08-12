@@ -23,13 +23,10 @@ class App extends Component {
         this.ws = new Sockette('ws://events-stream.herokuapp.com/', {
             timeout: 5e3,
             maxAttempts: 10,
-            onopen: e => {console.log('Connected!', e)
+            onopen: e => {console.log('Connected!', e);
                 this.ws.json({type: 'ping'});},
             onmessage: e => {
                 this.props.itemListUpdate(this.props.listData,JSON.parse(e.data))},
-            onreconnect: e => console.log('Reconnecting...', e),
-            onmaximum: e => console.log('Stop Attempting!', e),
-            onclose: e => console.log('Closed!', e),
             onerror: e => console.log('Error:', e)
         });
 
@@ -45,22 +42,18 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+            <h1 className='App-text-header'>Axonize Stream</h1>
+            <h2 className='App-text-header-desc'>Review and filter the data stream</h2>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-          <h1 className="App-intro">OH Hi asdasdasd Mark!</h1>
           <SearchBar/>
           <DataList
           items={this.props.listData.filter((value) => {
               return this.props.filterText === '' ? true :
                   value.name.toLowerCase().indexOf(this.props.filterText) != -1;
           })}/>
-          <div style={{position: 'sticky', bottom: 0}}>
-              {this.props.listData.length} Items
-          </div>
+          <footer className="footer-container">
+              <p className="footer-text">{this.props.listData.length} Items</p>
+          </footer>
       </div>
     );
   }

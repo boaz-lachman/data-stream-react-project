@@ -1,0 +1,49 @@
+
+.Search-bar-container{
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 3vw;
+    margin-left: 2.5vw;
+}
+
+.Search-bar-image{
+    width: 3.5%
+}
+
+.Search-bar-text-input{
+    text-align: left;
+    font-size: 3vw;
+    margin-left: 10px;
+    font-family: 'Slabo 27px';
+    font-size-adjust: 0.5;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+
+}
+
+.Search-bar-text-input:focus{
+    outline: none;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .Search-bar-text-input {
+        text-align: left;
+        font-size: 14px;
+        margin-left: 10px;
+        font-family: 'Slabo 27px';
+        font-size-adjust: 0.5;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+
+    .Search-bar-image{
+        width: 20px
+    }
+
+
+}

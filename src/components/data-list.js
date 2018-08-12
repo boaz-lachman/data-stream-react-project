@@ -28,7 +28,7 @@ class DataList extends PureComponent {
                         name={value.name}
                         value={value.value}
                         unit={value.unit}
-                        date={moment(value.date).format('M/D/YYYY, hh:MM:SS A')}
+                        date={moment(value.date).format('M/D/YYYY, hh:MM:ss A')}
                     />
                 </div>)
         });

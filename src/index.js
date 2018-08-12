@@ -10,6 +10,8 @@ import reducers from './reducers';
 
 const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 
+document.title = "Axonize Stream";
+
 ReactDOM.render(
     <Provider store={store}>
         <App />

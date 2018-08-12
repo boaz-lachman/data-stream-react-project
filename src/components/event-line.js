@@ -15,15 +15,15 @@ class EventLine extends PureComponent{
               <div className="cell-container">
             <img className="imageStyle" src={this.props.logo}/>
               </div>
-              <div className="name-style">
-              <p>{this.props.name}</p>
+              <div className="name-container-style">
+                <span className="name-style">{this.props.name}</span>
               </div>
               <div className="unit-container">
-                <p>{this.props.value}</p>
-                  <p>{this.props.unit}</p>
+                <p className="unit-style">{this.props.value}</p>
+                  <p className="unit-style">{this.props.unit}</p>
               </div>
-              <div className="cell-container">
-              <p>{this.props.date}</p>
+              <div className="date-container-style">
+              <p className="date-style">{this.props.date}</p>
               </div>
           </div>
         );

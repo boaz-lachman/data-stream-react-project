@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from "react-redux";
+import '../styles/search-bar-styles.css';
 import {filterUpdate} from "../actions";
 
 
@@ -17,8 +18,12 @@ class SearchBar extends Component{
 
     render(){
         return(
-          <div>
-              <input type={"text"}
+          <div className="Search-bar-container">
+              <img className="Search-bar-image"
+                   src={require('../images/magnifying-glass-image.png')}/>
+              <input
+                  className="Search-bar-text-input"
+                  type={"text"}
                      value={this.props.filterText}
                      onChange={this.handleChangeFilter}/>
           </div>

@@ -2,21 +2,25 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App-header {
+  background: aquamarine;
+  background: linear-gradient(teal, aquamarine, white);
+  padding: 2px;
+  color: black;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App-text-header{
+  font-size: 3.5vw
+}
+
+.App-text-header-desc{
+  font-size: 2.5vw
 }
 
 .List-container {
   padding-right: 30px;
   padding-Left: 30px;
+  padding-bottom: 40px;
 }
 
 .Separator-line {
@@ -32,6 +36,22 @@
   border-color: lightgrey;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.footer-container{
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: aquamarine;
+  background: linear-gradient(white, aquamarine, teal);
+}
+
+.footer-text{
+  font-size: 17px;
+  margin-left: 30px;
 }
 
 .App-title {

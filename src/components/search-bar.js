@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import {connect} from "react-redux";
 import '../styles/search-bar-styles.css';
 import {filterUpdate} from "../actions";
 
 
-class SearchBar extends Component{
+class SearchBar extends PureComponent{
 
     constructor(props){
         super(props);

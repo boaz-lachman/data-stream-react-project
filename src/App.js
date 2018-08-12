@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import EventLine from "./components/event-line";
 import Sockette from 'sockette';
-import moment from 'moment';
 import {connect} from "react-redux";
 import {itemListUpdate} from "./actions";
 import DataList from "./components/data-list";
